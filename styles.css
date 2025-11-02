@@ -1,1 +1,115 @@
 /*  your css code here. If applicable */
+  <style>
+        /* General Setup */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Equivalent to Tailwind bg-gray-50 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 16px; /* Equivalent to Tailwind p-4 */
+        }
+
+        /* Serif Text Style (for H1 and P) */
+        .serif-text {
+            font-family: 'Georgia', serif;
+        }
+
+        /* 1. Container requirements - Class .hero */
+        .hero {
+            /* Box Model / Flexbox Properties (Required) */
+            display: flex; 
+            justify-content: space-between; /* Equivalent to Tailwind justify-between */
+            align-items: center; /* Equivalent to Tailwind items-center */
+
+            /* Layout and Appearance */
+            height: 80vh; /* Adjusted from 100vh for better fit in a document viewer */
+            background-color: white;
+            max-width: 1400px;
+            width: 100%; /* Ensure it takes full available width up to max-width */
+            margin: 0 auto;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Equivalent to shadow-2xl */
+        }
+
+        /* Image Container (Left side) */
+        .image-container {
+            width: 66.666667%; /* Equivalent to Tailwind w-2/3 */
+            height: 100%; /* Equivalent to Tailwind h-full */
+        }
+
+        /* Image Styling */
+        .hero-image {
+            width: 100%; /* Equivalent to Tailwind w-full */
+            height: 100%; /* Equivalent to Tailwind h-full */
+            object-fit: cover; /* Required property */
+            display: block;
+        }
+
+        /* Content Box (Right side) */
+        .content-box {
+            width: 33.333333%; /* Equivalent to Tailwind w-1/3 */
+            display: flex;
+            flex-direction: column; /* Equivalent to Tailwind flex-col */
+            justify-content: center;
+            align-items: center;
+            padding: 32px; /* Equivalent to Tailwind p-8 */
+            text-align: center;
+        }
+
+        /* H1 Tag Styling */
+        .content-box h1 {
+            font-size: 2.25rem; /* Equivalent to Tailwind text-4xl */
+            font-weight: 700; /* Equivalent to Tailwind font-bold */
+            margin-bottom: 1rem; /* Equivalent to Tailwind mb-4 */
+            line-height: 1.2;
+            color: #1f2937; /* Equivalent to a dark gray */
+        }
+
+        /* P Tag Styling */
+        .content-box p {
+            font-size: 1.125rem; /* Equivalent to Tailwind text-lg */
+            color: #4b5563; /* Equivalent to Tailwind text-gray-600 */
+            margin-bottom: 2rem; /* Equivalent to Tailwind mb-8 */
+            max-width: 20rem; /* Equivalent to Tailwind max-w-xs */
+        }
+
+        /* "Explore Now" Link/Button Styling */
+        .explore-button {
+            /* Required Properties */
+            padding: 12px 24px; 
+            background-color: #e60023; /* Specified background-color */
+            color: white; /* Specified color */
+            border-radius: 9999px; /* Specified border-radius (rounded-full) */
+
+            /* Additional Styling for polish */
+            font-weight: 600; /* Equivalent to font-semibold */
+            text-transform: uppercase;
+            letter-spacing: 0.05em; /* Equivalent to tracking-wide */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); /* Equivalent to shadow-lg */
+        }
+
+        .explore-button:hover {
+            background-color: #cc001f; /* Darker red for hover effect */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                height: auto;
+            }
+            .image-container, .content-box {
+                width: 100%;
+                height: auto;
+            }
+            .image-container {
+                height: 40vh; /* Smaller image height on mobile */
+            }
+        }
+
+    </style>
